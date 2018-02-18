@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <site-header></site-header>
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
+    <site-footer></site-footer>
   </div>
 </template>
 
 <script>
+import SiteHeader from '@/components/SiteHeader';
+import SiteFooter from '@/components/SiteFooter';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'site-header': SiteHeader,
+    'site-footer': SiteFooter,
+  }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+<style lang="scss">
+@import "./assets/styles/main.scss";
+
+
 </style>
+
+

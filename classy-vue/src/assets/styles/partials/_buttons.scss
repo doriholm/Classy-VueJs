@@ -1,0 +1,54 @@
+.btn {
+    font-family: $font;
+    font-weight: 600;
+  border: 2px solid;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &:hover{
+    -webkit-box-shadow: -2px 10px 42px -12px rgba(0, 0, 0, 0.54);
+    -moz-box-shadow: -2px 10px 42px -12px rgba(0, 0, 0, 0.54);
+    box-shadow: -2px 10px 42px -12px rgba(0, 0, 0, 0.54);
+    background-color: $dark;
+    color: $white;
+    border-color: $dark;
+  }
+  &--large {
+    font-size: 1.125rem;
+  }
+}
+
+@mixin btn-theme($border-color, $bg-color:null ,$font-color:null) {
+  border-color: $border-color;
+  background-color: $bg-color;
+  color: $font-color;
+}
+
+.btn--white-trans {
+  @include btn-theme($white, null, $white);
+}
+.btn--white {
+  @include btn-theme($white, $white);
+}
+.btn--gray {
+  @include btn-theme($dark-gray, $dark-gray);
+}
+.btn--blue {
+  @include btn-theme($sky-blue, $sky-blue, $white);
+}
+
+.btn--small{
+    font-size: 0.75rem; //12px
+}
+.btn--medium{
+    font-size: 0.875rem; //14px
+}
+.btn--large{
+    font-size: 1rem; //16px
+}
+.btn--x-large{
+    font-size: 1.125rem; //18px
+}

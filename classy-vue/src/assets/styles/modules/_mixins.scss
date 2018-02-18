@@ -1,0 +1,49 @@
+@mixin background($imgpath, $position: center center, $size: cover, $repeat: no-repeat ){
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+        size: $size;
+    }
+}
+
+@mixin grid-col-3{
+    display: grid;
+    grid-template-columns: auto minmax(700px, 1170px) auto;
+}
+
+@mixin grid-col-4{
+    display: grid;
+    grid-template-columns: auto 585px 585px auto;
+}
+
+@mixin grid-col-12{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin grid-col-5{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+//Right way to do it
+@mixin grid-col-14{
+    display: grid;
+    //grid-gap:30px;
+    grid-template-columns: auto repeat( 12, 97.5px ) auto;
+}
+
+//with grid gap
+@mixin grid-col-12--r{
+    display: grid;
+    grid-gap:30px;
+    grid-template-columns: repeat( 12, 70px );
+}
+
+
+// Perfect grid for a 12 col layout 
+// but does not work well with mockup
+//      display: grid;
+//      grid-gap:30px;
+//      grid-template-columns: auto repeat( 12, 70px ) auto;

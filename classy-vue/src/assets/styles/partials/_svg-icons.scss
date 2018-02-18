@@ -1,0 +1,101 @@
+.svg {
+  width: 22px;
+  height: 22px;
+  &-nav {
+    fill: none;
+    stroke: currentColor;
+    vertical-align: bottom;
+    stroke-miterlimit: 10;
+    stroke-width: 2.5;
+  }
+}
+
+//Logo
+.cls-1 {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  width: 22px;
+  height: 22px;
+}
+
+.cls-2{
+  fill: currentColor;
+}
+
+.user-icon {
+  //stroke-width: 2.5;
+  //stroke-miterlimit: 10;
+}
+
+.shopping-bag-icon {
+  //stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  // stroke-miterlimit: 10;
+}
+
+.search-icon-circle {
+  // stroke-width: 3;
+  //stroke-miterlimit: 10;
+}
+
+.search-icon-line {
+  //stroke-width: 3;
+  stroke-linecap: round;
+  //stroke-miterlimit: 10;
+}
+
+.mail-icon {
+  //fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  //stroke-miterlimit: 10;
+}
+
+.quick-view-icon,
+.heart-icon {
+  fill: #fff;
+}
+
+/* 
+Social media icons
+*/
+
+.st0 {
+  display: none;
+}
+//does nothing
+.st1 {
+  display: inline;
+  fill: none;
+  stroke: #b5b5b5;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}
+//does nothing
+.st2 {
+  display: inline;
+  fill: #b5b5b5;
+}
+.st3 {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.25;
+  stroke-miterlimit: 10;
+}
+.st4 {
+  fill: currentColor;
+}
+
+.social-media-icons__item{
+  color:#b5b5b5;
+  &:hover{
+    color:$sky-blue;
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+}

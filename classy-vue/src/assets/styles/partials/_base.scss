@@ -1,0 +1,58 @@
+@import "../modules/typography";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 1.875rem; //30px
+}
+
+h2 {
+  font-size: 1.25rem; // 20px
+}
+
+h3 {
+  font-size: 1.125rem; // 18px
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.875rem; // 14px
+}
+
+h6 {
+  font-size: 0.75rem; // 12px
+}
+
+p{
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.inline-list{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &__item{
+      display: inline-block;
+      margin-left:10px;
+  }
+}
+

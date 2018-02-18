@@ -1,0 +1,95 @@
+@import "../modules/mixins";
+@import "../modules/variables";
+
+.grid-layout{
+  @include grid-col-3;
+}
+
+// ------ HOME -----
+.grid-layout--home{
+  @include grid-col-3;
+  grid-template-areas: 
+  "hero-s hero-s hero-s"
+  ". newsl ."
+  "brand-s brand-s brand-s"
+  ". offers ."
+  ". prod-preview ."
+  "discount discount discount"
+  "testimonials testimonials testimonials"
+}
+
+.hero-banner-slider{grid-area: hero-s;}
+.newsletter{grid-area: newsl;}
+.top-brands{grid-area: brand-s;}
+.product-offers{grid-area: offers;}
+.products-preview{grid-area: prod-preview;}
+.discount{grid-area: discount;}
+.testimonials{grid-area: testimonials;}
+
+// -------- COLLECTIONS ---------
+.grid-layout--collections{
+  @include grid-col-3;
+  grid-template-areas:
+  "hero hero hero"
+  ". products ." 
+  "newsl-b newsl-b newsl-b"
+}
+
+.hero-banner{grid-area: hero;}
+.products{grid-area: products;}
+.newsletter-banner{grid-area: newsl-b;}
+
+
+// -------- PRODUCT ---------
+.grid-layout--product{
+  @include grid-col-3;
+  grid-template-areas:
+  "discount-1 discount-1 discount-1"
+  "product product product"
+  "info-1 info-1 info-1"
+  "info-2 info-2 info-2"
+  "discount-2 discount-2 discount-2"
+}
+
+.banner-discount-top{grid-area: discount-1;}
+.info-section-1{
+  grid-area: info-1;
+  grid-column: 1 / 4; 
+  @include grid-col-4;
+  &__image{
+    grid-column:  1 / 3;
+  }
+  &__content{
+    grid-column:  3 / 4;
+  }
+}
+.info-section-2{
+  grid-area: info-2;
+  grid-column: 1 / 4;   
+  @include grid-col-4;
+  &__image{
+    grid-column:  3 / 5;
+  }
+  &__content{
+    grid-column:  2 / 3;
+  }
+}
+.banner-discount-bottom{grid-area: discount-2;}
+
+
+
+.grid-layout--product--details{
+  grid-area: product;
+  @include grid-col-14;
+  grid-template-areas:
+  ". it ip ip ip ip ip . pf pf pf pf pf ."
+  ". it ip ip ip ip ip . ps ps ps ps ps ."
+  ". . ts ts ts ts ts ts ts ts ts ts . .";
+}
+
+.image-thumbnails{grid-area: it;}
+.image-preview{grid-area: ip;}
+.product-form{grid-area: pf;}
+.product-summary{grid-area: ps;}
+.product-teaser{grid-area: ts;}
+
