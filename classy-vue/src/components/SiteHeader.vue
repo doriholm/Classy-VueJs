@@ -84,6 +84,10 @@ export default {
     color: $white;
 }
 
+#logo{
+    color: $white;
+}
+
 //move to header slider
 .banner-image {
   width: 100%;

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Hoodie",
+        "price": 499,
+        "description": "What an amazing sweater we have here",
+        "image_url": "../../../static/images/product/jacket1.jpg",
+        "featured": "newArrivals"
+    },
+    {
+        "id": 2,
+        "title": "Sweater",
+        "price": 299,
+        "description": "What an amazing sweater we have here",
+        "image_url": "../../../static/images/product/jacket1.jpg",
+        "featured": "topSellers"
+    },
+    {
+        "id": 3,
+        "title": "Pants",
+        "price": 199,
+        "description": "What an amazing sweater we have here",
+        "image_url": "../../../static/images/product/jacket1.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Jacket",
+        "price": 599,
+        "description": "What an amazing sweater we have here",
+        "image_url": "../../../static/images/product/jacket1.jpg"
+    }
+]

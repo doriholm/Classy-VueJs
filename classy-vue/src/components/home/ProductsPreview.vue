@@ -1,12 +1,21 @@
 <template>
         <section class="products-preview">
+
+            <ul >
+                <li v-for="product in productFilter" v-bind:key="product.id">
+                    {{ product }}
+                    <img v-bind:src=" product.image_url" alt="">
+                </li>
+            </ul>
+
             <header class="products-preview__header">
-                <ul class="inline-list">
-                    <li class="inline-list__item">New arrivals</li>
-                    <li class="inline-list__item">Top sellers</li>
-                    <li class="inline-list__item">Featured</li>
+                <ul class="products-preview__category inline-list">
+                    <li v-on:click="productFilterKey = 'newArrivals'" :class="{activePreview: productFilterKey == 'newArrivals' }" class="products-preview__category--item inline-list__item">New arrivals</li>
+                    <li v-on:click="productFilterKey = 'topSellers'" :class="{activePreview: productFilterKey == 'topSellers' }" class="products-preview__category--item inline-list__item">Top sellers</li>
+                    <li v-on:click="productFilterKey = 'featured'" :class="{activePreview: productFilterKey == 'featured' }" class="products-preview__category--item inline-list__item">Featured</li>
                 </ul>
             </header>
+
             <div class="product">
                 <figure class="product__img-container">
                     <figcaption class="product__sale-tag">Sale</figcaption>
@@ -44,11 +53,40 @@
         </section>
 </template>
 
+
 <script>
+import axios from 'axios';
+
 export default {
-  name: 'products-preview'
+  name: 'products-preview',
+  data: function(){
+      return {
+          productFilterKey: 'newArrivals',
+          products: []
+      };
+  },
+  computed: {
+      productFilter: function(){
+          return this.products.filter(product => product.featured == this.productFilterKey);
+      }
+  },
+  created: function(){
+      this.getProducts();
+  },
+  methods: {
+      getProducts: function(){
+          axios.get("../../../static/products.json")
+          .then(response => {
+              this.products = response.data;
+          })
+          .catch(error => {
+              console.log(error);
+          });
+      }
+  }
 }
 </script>
+
 
 <style lang="scss">
 @import '../../assets/styles/modules/_variables';
@@ -63,5 +101,29 @@ export default {
     grid-column: span 14;
     text-align: center;
   }
+  &__category{
+      margin-bottom: 4rem;
+    &--item{
+        cursor: pointer;
+        position: relative;
+        font-size: 1.125rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.5s linear;
+        margin-right: 2rem;
+    }
+  }
+}
+
+.activePreview{
+    &:before {
+      content: "";
+      position: absolute;
+      width: 40%;
+      height: 0px;
+      bottom: -7px;
+      left: 30%;
+      border-bottom: 3px solid $dark;
+    }
 }
 </style>
