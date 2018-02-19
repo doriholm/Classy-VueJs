@@ -1,5 +1,5 @@
 <template>
-    <main class="grid-layout--home">
+    <main class="grid-layout--home hasHero">
         <hero-slider></hero-slider>
         <news-letter></news-letter>
         <top-brands></top-brands>
@@ -30,6 +30,7 @@ export default {
       'summer-discount': SummerDiscount,
       'testimonials-slider': TestimonialsSlider,
   }
+  
 }
 </script>
 

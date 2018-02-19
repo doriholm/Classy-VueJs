@@ -78,6 +78,10 @@ export default {
   },
   watch: {
     //watch route for id
+    //watch: {
+    //’$route.params.id’: function (id) {
+    //this.doStuff()
+    //}
   },
   methods:{
     getProductById: function(id){

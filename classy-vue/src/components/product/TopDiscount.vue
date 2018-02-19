@@ -15,8 +15,6 @@ export default {
 @import '../../assets/styles/modules/_mixins';
 
 .banner-discount-top {
-  //grid-column: span 3;
-  margin-top: 100px;
   text-align: center;
   color: $white;
   @include background("../../../static/images/50-off-summer.jpg");

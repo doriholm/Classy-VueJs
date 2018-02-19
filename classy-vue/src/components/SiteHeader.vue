@@ -1,8 +1,8 @@
 <template>
-   <header class="main-header grid-layout">
+   <header :class="{'header-pos-absolute': check === true}" class="main-header grid-layout">
         <div class="nav-container">
             <div class="logo--header">
-                <a class="" href="#">
+                <a class="" href="/">
                                         <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293.44 43.54">
                         <path class="cls-2" d="M30.19,34.39a14.46,14.46,0,0,1-5.66,4.75,16.87,16.87,0,0,1-7,1.44,18.74,18.74,0,0,1-7.13-1.32,15.91,15.91,0,0,1-5.54-3.7A16.81,16.81,0,0,1,1.3,29.9,19.3,19.3,0,0,1,0,22.72a19.11,19.11,0,0,1,1.3-7.15A16.82,16.82,0,0,1,4.9,9.93a16.38,16.38,0,0,1,5.54-3.72,18.55,18.55,0,0,1,7.13-1.34A16.83,16.83,0,0,1,24,6.09a12.83,12.83,0,0,1,5.26,4.1l-2.59,2.16a9.43,9.43,0,0,0-4.06-3.5,12.21,12.21,0,0,0-5.06-1.1,14.9,14.9,0,0,0-6,1.15,13.22,13.22,0,0,0-4.53,3.17,13.85,13.85,0,0,0-2.88,4.75,16.73,16.73,0,0,0-1,5.9,16.83,16.83,0,0,0,1,5.91,14,14,0,0,0,2.88,4.75,13.36,13.36,0,0,0,4.53,3.17,15.08,15.08,0,0,0,6,1.15,12.85,12.85,0,0,0,2.69-.31,12.52,12.52,0,0,0,2.71-1,13.26,13.26,0,0,0,2.52-1.64,10.29,10.29,0,0,0,2.11-2.37Z"
                         />
@@ -46,7 +46,34 @@
 
 <script>
 export default {
-  name: "site-header"
+  name: "site-header",
+  data: function(){
+    return {
+      check: true
+    };
+  },
+  computed: {
+      
+  }, 
+  mounted: function(){
+    this.checkHead()
+  },
+  watch: {
+      '$route' :function(){
+          this.checkHead();
+      }
+  }, methods:{
+checkHead: function() {
+         if (document.querySelector('.hasHero') !== null) {
+             this.check = true;
+        }
+        else{
+             this.check = false;             
+
+        };
+            
+      }
+  }
 };
 </script>
 
@@ -55,15 +82,18 @@ export default {
 @import '../assets/styles/modules/_mixins';
 
 .main-header {
-  position: absolute;
   width: 100%;
+  padding: 1rem 0;
+  background-color: $dark;
+}
+
+.header-pos-absolute{
+  position: absolute;
+  background-color: transparent;    
 }
 
 .nav-container {
   grid-column: 2 / 3;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   width: 100%;
   z-index: 2;
   display: flex;

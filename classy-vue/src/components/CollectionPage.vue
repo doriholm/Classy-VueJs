@@ -1,5 +1,5 @@
 <template>
-    <main class="grid-layout--collections">
+    <main class="grid-layout--collections hasHero">
         <hero-banner></hero-banner>
         <product-collection></product-collection>
         <newsletter-banner></newsletter-banner>
