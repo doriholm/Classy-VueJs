@@ -5,14 +5,17 @@
         "price": 499,
         "description": "What an amazing sweater we have here",
         "image_url": "../../../static/images/product/jacket1.jpg",
-        "featured": "newArrivals"
+        "featured": "newArrivals",
+        "sale": true,
+        "brand": "Spongebob and Patrick",
+        "info": "Handcrafted by small spiders living in Angola"
     },
     {
         "id": 2,
         "title": "Sweater",
         "price": 299,
         "description": "What an amazing sweater we have here",
-        "image_url": "../../../static/images/product/jacket1.jpg",
+        "image_url": "../../../static/images/product/jumpsuit1.jpg",
         "featured": "topSellers"
     },
     {
@@ -20,13 +23,16 @@
         "title": "Pants",
         "price": 199,
         "description": "What an amazing sweater we have here",
-        "image_url": "../../../static/images/product/jacket1.jpg"
+        "image_url": "../../../static/images/product/playsuit1.jpg",
+        "featured": "featured",
+        "sale": true
     },
     {
         "id": 4,
         "title": "Jacket",
         "price": 599,
         "description": "What an amazing sweater we have here",
-        "image_url": "../../../static/images/product/jacket1.jpg"
+        "image_url": "../../../static/images/product/playsuit2.jpg",
+        "featured": "featured"
     }
 ]

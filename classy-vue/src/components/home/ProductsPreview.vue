@@ -1,13 +1,6 @@
 <template>
         <section class="products-preview">
 
-            <ul >
-                <li v-for="product in productFilter" v-bind:key="product.id">
-                    {{ product }}
-                    <img v-bind:src=" product.image_url" alt="">
-                </li>
-            </ul>
-
             <header class="products-preview__header">
                 <ul class="products-preview__category inline-list">
                     <li v-on:click="productFilterKey = 'newArrivals'" :class="{activePreview: productFilterKey == 'newArrivals' }" class="products-preview__category--item inline-list__item">New arrivals</li>
@@ -16,17 +9,19 @@
                 </ul>
             </header>
 
-            <div class="product">
+            <div v-for="product in productFilter" v-bind:key="product.id" class="product">
                 <figure class="product__img-container">
-                    <figcaption class="product__sale-tag">Sale</figcaption>
-                    <img class="full-width" src="../../../static/images/product/jacket1.jpg" alt="">
+                    <figcaption v-if="product.sale == true" class="product__sale-tag">Sale</figcaption>
+                    <img class="product__img-container--img full-width" v-bind:src=" product.image_url" alt="">
                     <figcaption class="product__extra-options">
                         <div class="product__extra-options--centering">
+                            <router-link :to="'/product/' + product.id">
                             <div class="circle circle--small circle--blue">
                                 <svg class="svg" viewBox="0 0 24 14">
                                     <use xlink:href="#quick-view-icon"></use>
                                 </svg>
                             </div>
+                            </router-link>
                             <p>Quick view</p>
                         </div>
                         <div class="product__extra-options--centering">
@@ -40,8 +35,8 @@
                     </figcaption>
                 </figure>
                 <div class="product__info">
-                    <p class="product__name">Some text about product Playsuit</p>
-                    <h4 class="product__price">Price</h4>
+                    <p class="product__name">{{product.description}}</p>
+                    <h4 class="product__price">${{product.price}}</h4>
                     <button class="product__add-to-bag btn ">
                         <svg class="svg svg-nav" viewBox="0 0 21.5 27.5">
                             <use xlink:href="#shopping-bag-icon"></use>
@@ -93,6 +88,7 @@ export default {
 @import '../../assets/styles/modules/_mixins';
 
 .products-preview {
+    min-height: 600px;
   grid-column: 2 / 3;
   @include grid-col-12;
   grid-gap: 1rem;

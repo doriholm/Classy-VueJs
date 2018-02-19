@@ -81,8 +81,11 @@
     padding: 0;
     position: relative;
     overflow: hidden;
+    &--img{
+      display: block;
+    }
     &:hover > .product__extra-options {
-      bottom: 2px;
+      bottom: 0;
     }
   }
   &__sale-tag {

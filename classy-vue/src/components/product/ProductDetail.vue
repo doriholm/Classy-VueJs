@@ -8,12 +8,12 @@
                 <img class="image-thumbnails__item" src="../../../static/images/product-page/product_Adelia_sm5.jpg" alt="">
             </div>
             <div class="image-preview">
-                <img class="image-preview__item" src="../../../static/images/product-page/product_Adelia_big.jpg" alt="">
+                <img class="image-preview__item" v-bind:src=" product.image_url" alt="">
             </div>
             <div class="product-form">
-                <h1 class="product-form__name">Adelia Dress</h1>
+                <h1 class="product-form__name">{{product.title}}</h1>
                 <div class="product-form--row">
-                    <h3 class="product-form__price">Price</h3>
+                    <h3 class="product-form__price">${{product.price}}</h3>
                     <span class="product-form__shipping">Free Shipping Worldwide</span>
                 </div>
                     <select class="product-form__color" name="" id="">
@@ -38,13 +38,13 @@
 
             <div class="product-summary">
                 <ul class="product-summary-list inline-list">
-                    <li class="product-summary-list__item inline-list__item">Description</li>
-                    <li class="product-summary-list__item inline-list__item">Brand</li>
-                    <li class="product-summary-list__item inline-list__item">Info</li>
-                </ul>
-                <div class="product-summary__description"><p>Description ipsum dolor sit amet consectetur adipisicing elit. Praesentium, excepturi atque laborum officia eaque hic, adipisci, esse necessitatibus sit est nulla saepe. Quis ipsa maxime repellendus delectus autem consequuntur distinctio!</p></div>
-                <div class="product-summary__brand"><p>Brand ipsum dolor sit amet consectetur adipisicing elit. Aliquam, esse. Laboriosam nisi facilis eaque neque a iusto, in libero alias necessitatibus maxime, quos corrupti quod qui nam ab praesentium. Quae.</p></div>
-                <div class="product-summary__Info"><p>Info ipsum dolor sit amet, consectetur adipisicing elit. Ipsam voluptates, blanditiis veniam sed magnam fugiat accusantium temporibus maxime cumque, optio expedita! Voluptas ipsam excepturi voluptate rerum? Maxime ratione repellat voluptate?</p></div>
+                    <li :class="{'is-active': activeTab === 1}" @click="activeTab = 1" class="product-summary-list__item inline-list__item">Description</li>
+                    <li :class="{'is-active': activeTab === 2}" @click="activeTab = 2" class="product-summary-list__item inline-list__item">Brand</li>
+                    <li :class="{'is-active': activeTab === 3}" @click="activeTab = 3" class="product-summary-list__item inline-list__item">Info</li>
+                </ul> 
+                <div v-show="activeTab == 1" class="product-summary__description"><p>{{product.description}}</p></div>
+                <div v-show="activeTab == 2" class="product-summary__brand"><p>{{product.brand}}</p></div>
+                <div v-show="activeTab == 3" class="product-summary__Info"><p>{{product.info}}</p></div>
             </div>
 
             <div class="product-teaser">
@@ -60,11 +60,39 @@
 
 </template>
 
+
 <script>
+import axios from "axios";
+
 export default {
-  name: 'product-detail'
+  name: 'product-detail',
+  data: function(){
+    return {
+      product: "",
+      activeTab: 1
+    };
+  },
+  created: function(){
+    let id = this.$route.params.id;
+    this.getProductById(id);
+  },
+  watch: {
+    //watch route for id
+  },
+  methods:{
+    getProductById: function(id){
+      axios.get("../../../static/products.json")
+      .then(response => {
+        this.product = response.data.filter(product => product.id == id)[0];
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    }
+  }
 }
 </script>
+
 
 <style lang="scss">
 @import '../../assets/styles/modules/_variables';
@@ -140,6 +168,11 @@ export default {
 }
 
 .product-summary {
+  &-list{
+  &__item{
+    cursor: pointer;
+  }
+  }
 }
 
 .product-teaser {

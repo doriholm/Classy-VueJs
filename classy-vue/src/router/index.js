@@ -19,7 +19,7 @@ export default new Router({
       component: CollectionPage
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'ProductPage',
       component: ProductPage
     }
