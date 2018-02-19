@@ -4,7 +4,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <router-view/>
     <main-menu :open=isOpen></main-menu>
-    <!-- <shopping-bag></shopping-bag> -->
+    <shopping-bag :open=isOpen></shopping-bag>
     <div v-show="isOpen != 'none'" v-on:click="hideAll" class="overlay"></div>
     <site-footer></site-footer>
   </div>

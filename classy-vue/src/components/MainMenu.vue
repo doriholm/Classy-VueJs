@@ -1,10 +1,12 @@
 <template>
   <div :class="{isActive: isOpen == 'menu'}" class="main-menu">
+      <div class="main-menu__container">
       <ul class="main-menu-list">
           <li class="main-menu-list__item">Home</li>
           <li class="main-menu-list__item">Collection</li>
           <li class="main-menu-list__item">Contact</li>
       </ul>
+</div>
   </div>
 </template>
 
@@ -38,4 +40,8 @@ export default {
 <style lang="scss">
 @import "../assets/styles/modules/_variables";
 @import "../assets/styles/modules/_mixins";
+
+.main-menu__container{
+    padding: 50px;
+}
 </style>

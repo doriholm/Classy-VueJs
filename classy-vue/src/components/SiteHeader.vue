@@ -26,7 +26,7 @@
                     </svg>
                     Login
                 </a>
-                <a class="main-nav__item" href="#">
+                <a v-on:click="showShoppingBag" class="main-nav__item" href="#">
                     <svg class="svg svg-nav" viewBox="0 0 21.5 27.5">
                         <use xlink:href="#shopping-bag-icon"></use>
                     </svg>
@@ -54,7 +54,8 @@ export default {
   data: function(){
     return {
       check: true,
-      isOpen: ''
+      isOpen: '',
+      //shoppingBag: 'shoppingBag'
     };
   },
   props: ['msg'],
@@ -72,6 +73,12 @@ export default {
            },
     showMenu: function(event){
         this.isOpen = 'menu'
+        this.$emit('isOpen', this.isOpen);
+        this.isOpen = 'none'
+        console.log(this.isOpen);
+    },
+    showShoppingBag: function(event){
+        this.isOpen = 'shoppingBag';
         this.$emit('isOpen', this.isOpen);
         this.isOpen = 'none'
         console.log(this.isOpen);
