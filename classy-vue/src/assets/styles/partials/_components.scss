@@ -34,18 +34,25 @@
   }
 }
 
-.shopping-bag{
+.shopping-bag, .main-menu{
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
-  padding: 3rem 0 3rem 3rem;
   z-index: 10;
-  width: 500px;
+  width: 0px;
   background-color: $white;
   transition: 0.5s;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.shopping-bag{
+  padding: 3rem 0 3rem 3rem;  
+}
+
+.isActive{
+  width: 500px;
 }
 
 .overlay{

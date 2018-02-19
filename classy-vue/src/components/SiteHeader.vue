@@ -37,7 +37,11 @@
                         <use xlink:href="#search-icon"></use>
                     </svg>
                 </a>
-                <div class="burger-nav"></div>
+                <div v-on:click="showMenu" class="burger-nav main-nav__item">
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                    <div class="menu-icon"></div>
+                </div>
             </nav>
         </div>
 
@@ -49,12 +53,11 @@ export default {
   name: "site-header",
   data: function(){
     return {
-      check: true
+      check: true,
+      isOpen: ''
     };
   },
-  computed: {
-      
-  }, 
+  props: ['msg'],
   mounted: function(){
     this.checkHead()
   },
@@ -62,17 +65,17 @@ export default {
       '$route' :function(){
           this.checkHead();
       }
-  }, methods:{
-checkHead: function() {
-         if (document.querySelector('.hasHero') !== null) {
-             this.check = true;
-        }
-        else{
-             this.check = false;             
-
-        };
-            
-      }
+  }, 
+  methods:{
+     checkHead: function() {
+         return (document.querySelector('.hasHero') !== null) ? (this.check = true) : (this.check = false);
+           },
+    showMenu: function(event){
+        this.isOpen = 'menu'
+        this.$emit('isOpen', this.isOpen);
+        this.isOpen = 'none'
+        console.log(this.isOpen);
+    }
   }
 };
 </script>
@@ -80,6 +83,18 @@ checkHead: function() {
 <style lang="scss">
 @import '../assets/styles/modules/_variables';
 @import '../assets/styles/modules/_mixins';
+
+.burger-nav{
+    height: 22px;
+    width: 22;
+}
+
+.menu-icon{
+    width: 22px;
+    height: 3px;
+    background-color: $white;
+    margin: 4px 0;
+}
 
 .main-header {
   width: 100%;
@@ -103,9 +118,10 @@ checkHead: function() {
 }
 
 .main-nav {
+    display: flex;
   &__item {
     color: $white;
-    margin-left: 10px;
+    margin-left: 1rem;
   }
 }
 
