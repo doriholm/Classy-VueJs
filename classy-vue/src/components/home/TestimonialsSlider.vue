@@ -8,6 +8,10 @@
                 </div>
                 <h2 class="testimonials__name">{{testimonials[currentNumber].name }}</h2>
                 <p class="testimonials__text">{{ testimonials[currentNumber].text }}</p>
+                <div class="testimonials__pagination">
+                    <button v-for="n in slidesCount" :key="n.id"
+                    @click="goto(n-1)" :class="{testActive : n-1 === currentNumber}"></button>
+                </div>
             </div>
 
         </section>
@@ -44,12 +48,15 @@ export default {
 
     methods: {
         startRotation: function() {
-            this.timer = setInterval(this.next, 3000);
+            this.timer = setInterval(this.next, 5000);
         },
 
         next: function() {
           ( this.slidesCount - 1 == this.currentNumber) ? (this.currentNumber = 0) : (this.currentNumber += 1)
-        }
+        },
+        goto(index){
+         this.currentNumber = index;
+     }
     }
 }
 </script>
@@ -64,6 +71,7 @@ export default {
   @include grid-col-3;
   padding: $section-padding;
   &__layout {
+    position: relative;
     grid-column: 2 / 3;
     @include grid-col-12;
     text-align: center;
@@ -82,6 +90,31 @@ export default {
     font-style: italic;
     line-height: 2;
   }
+  &__pagination{
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        right: 0;
+        
+        button {
+            outline: none;
+            margin: 0 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color:transparent;
+            opacity: 0.8;
+            border-radius: 1rem;
+            border: 2px solid #ffff;
+            transition: all .5s linear;
+            &:hover{
+                cursor: pointer;
+                background-color:#ffff;
+        }
+            &.testActive{
+                background-color: #ffff;
+            }
+        }
+    }
 }
 
 .fade-transition {
