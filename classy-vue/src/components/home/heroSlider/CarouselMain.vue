@@ -18,6 +18,7 @@ export default {
           index: 0,
           slides: [],
           direction: null,
+          timer: null
       }
   },
   mounted: function(){
@@ -25,14 +26,21 @@ export default {
     this.slides.forEach((slide, i) => {
         slide.index = i
     })
+    this.startRotation();
  },
  computed: {
      slidesCount (){
          return this.slides.length
      }
- }
- ,
+ },
+ ready: function () {
+        this.startRotation();
+    },
  methods: {
+     startRotation: function() {
+            console.log('start');
+            this.timer = setInterval(this.next, 4000);
+        },
      next (){
          this.index += 1;
          this.direction = 'right';
