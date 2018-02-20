@@ -2,7 +2,7 @@
         <section class="testimonials">
             <div class="testimonials__layout">
                 <div class="testimonials__image circle circle--medium circle--light-blue">
-                    <img src="../../../static/images/jane-smith.png" alt="">
+                    <img src="../../../static/images/home-page/jane-smith.png" alt="">
                 </div>
                 <h2 class="testimonials__name">Jane Smith</h2>
                 <p class="testimonials__text">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind

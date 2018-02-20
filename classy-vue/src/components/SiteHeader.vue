@@ -141,15 +141,6 @@ export default {
     color: $white;
 }
 
-//move to header slider
-.banner-image {
-  width: 100%;
-}
 
-.banner-image__button {
-  position: absolute;
-  top: 70%;
-  right: 7.2%;
-}
 </style>
 

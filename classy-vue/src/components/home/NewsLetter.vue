@@ -94,7 +94,7 @@ export default {
   justify-content: center;
   color: $white;
   text-align: center;
-  @include background("../../../static/images/mens-lookbook.jpg");
+  @include background("../../../static/images/home-page/mens-lookbook.jpg");
 }
 
 .women-lookbook {
@@ -104,7 +104,7 @@ export default {
   justify-content: center;
   color: $white;
   text-align: center;
-  @include background("../../../static/images/womens-lookbook.jpg");
+  @include background("../../../static/images/home-page/womens-lookbook.jpg");
 }
 
 .lookbook-text {

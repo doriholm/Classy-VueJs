@@ -31,7 +31,7 @@ export default {
   line-height: 0.85;
   padding: $section-padding;
   &--background {
-    @include background("../../../static/images/summer-collection-banner.jpg");
+    @include background("../../../static/images/home-page/summer-collection-banner.jpg");
   }
   &__layout {
     grid-column: 2 / 3;

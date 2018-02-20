@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import HeroSlider from '@/components/home/HeroSlider';
+import HeroSlider from '@/components/home/heroSlider/HeroSlider';
 import NewsLetter from '@/components/home/NewsLetter';
 import TopBrands from '@/components/home/TopBrands';
 import ProductOffers from '@/components/home/ProductOffers';
