@@ -351,6 +351,7 @@ export default {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 100%;
   &__item {
     height: 85px;
     margin: 5px;
@@ -363,7 +364,7 @@ export default {
 
 @include max-width($tablet-wide){
 .social-media-icons {
-    grid-column: 1 / 13;
+    grid-column: 2 / 12;
 }
 }
 </style>

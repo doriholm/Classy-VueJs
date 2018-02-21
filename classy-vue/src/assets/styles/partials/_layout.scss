@@ -79,6 +79,7 @@
 // -------- PRODUCT ---------
 .grid-layout--product{
   @include grid-col-3;
+  @include max-width-layout(950px);  
   grid-template-areas:
   "discount-1 discount-1 discount-1"
   "product product product"
@@ -88,6 +89,7 @@
 }
 
 .banner-discount-top{grid-area: discount-1;}
+
 .info-section-1{
   grid-area: info-1;
   grid-column: 1 / 4; 
@@ -110,6 +112,7 @@
     grid-column:  2 / 3;
   }
 }
+
 .banner-discount-bottom{grid-area: discount-2;}
 
 
@@ -128,4 +131,68 @@
 .product-form{grid-area: pf;}
 .product-summary{grid-area: ps;}
 .product-teaser{grid-area: ts;}
+
+
+
+  @media (min-width: 851px) and (max-width: 1180px){
+  .grid-layout--product--details{
+   @include grid-col-4--small;
+    grid-gap: 2rem;
+    grid-template-areas:
+    ". ip pf ."
+    ". ip ps ."
+    ". it . ."
+    ". ts ts .";
+  }
+  .info-section-1, .info-section-2{
+    grid-column: 1 / 4; 
+    @include grid-col-4--small;
+  }
+}
+
+@include max-width(850px){
+  .info-section-1, .info-section-2{
+    text-align: center;
+    grid-column: 1 / 4; 
+    grid-template-rows: 1fr 1fr;
+    @include grid-col-4--small;
+    &__image{
+      grid-column:  span 4;
+      grid-row: 1 / 2;
+    }
+    &__content{
+      grid-column:  span 4;
+      grid-row: 2 / 3;
+    }
+  }
+}
+
+
+@media (min-width: 690px) and (max-width: 850px){
+  .grid-layout--product--details{
+   @include grid-col-4--small;
+    grid-gap: 2rem;
+    grid-template-areas:
+    ". it it ."
+    ". ip pf ."
+    ". ip . ."
+    ". ps ps ."
+    ". ts ts .";
+  }
+}
+
+@include max-width(689px){
+  .grid-layout--product--details{
+   @include grid-col-4--small;
+    grid-gap: 2rem;
+    grid-template-areas:
+    ". it it ."
+    ". ip ip ."
+    ". pf pf ."
+    ". ps ps ."
+    ". ts ts .";
+  }
+}
+
+
 

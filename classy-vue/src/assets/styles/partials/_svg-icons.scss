@@ -10,6 +10,35 @@
   }
 }
 
+.glass-1,
+.glass-2 {
+    fill: none;
+    stroke: currentColor;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+
+.glass-1 {
+    stroke-linecap: round;
+}
+
+.glasses-icon{
+  width: 60px;
+  height: 60px;
+}
+
+.slaufa, .hanger {
+  fill: none;
+  stroke:currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  &-icon{
+    width: 60px;
+    height: 60px;
+  }
+}
+
 //Logo
 .cls-1 {
   fill: none;

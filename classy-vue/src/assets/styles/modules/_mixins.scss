@@ -13,11 +13,14 @@
     grid-template-columns: minmax(15px, auto) minmax(700px, 1170px) minmax(15px, auto);
 }
 
-
-
 @mixin grid-col-4{
     display: grid;
     grid-template-columns: auto 585px 585px auto;
+}
+
+@mixin grid-col-4--small{
+    display: grid;
+    grid-template-columns: 15px 1fr 1fr 15px;
 }
 
 @mixin grid-col-12{

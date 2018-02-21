@@ -77,7 +77,7 @@ export default {
     color: $white;
   }
   &__image {
-    grid-column: 6 / 8;
+    grid-column: 1 / 13;
     margin: 0 auto;
   }
   &__name {
