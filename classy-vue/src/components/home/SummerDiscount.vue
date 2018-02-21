@@ -102,8 +102,8 @@ export default {
         }
       }
       &.circle--large{
-      width: 270px;
-      height: 270px;
+      width: 16.5rem;
+      height: 16.5rem;
     }
     }
     

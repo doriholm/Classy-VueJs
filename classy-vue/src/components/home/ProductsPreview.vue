@@ -12,7 +12,9 @@
             <div v-for="product in productFilter" v-bind:key="product.id" class="product">
                 <figure class="product__img-container">
                     <figcaption v-if="product.sale == true" class="product__sale-tag">Sale</figcaption>
+                     <router-link :to="'/product/' + product.id">
                     <img class="product__img-container--img full-width" v-bind:src=" product.image_url" alt="">
+                     </router-link>
                     <figcaption class="product__extra-options">
                         <div class="product__extra-options--centering">
                             <router-link :to="'/product/' + product.id">

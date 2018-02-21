@@ -59,8 +59,14 @@
     }
   }
 
+@mixin tablet {
+    @media (min-width: #{$tablet}) and (max-width: #{$tablet-wide}) {
+      @content;
+    }
+  }
+
 @mixin tablet-wide {
-    @media (min-width: #{$tablet-wide}) and (max-width: #{$desktop - 1px}) {
+    @media (min-width: #{$tablet}) and (max-width: #{$desktop - 1px}) {
       @content;
     }
   }

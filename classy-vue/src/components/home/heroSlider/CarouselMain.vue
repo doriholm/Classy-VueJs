@@ -65,6 +65,9 @@ export default {
 
 
 <style lang="scss">
+@import "../../../assets/styles/modules/_variables";
+@import "../../../assets/styles/modules/_mixins";
+
 .carousel{
     overflow: hidden;
     position: relative;
@@ -72,7 +75,8 @@ export default {
         position: absolute;
         top: 40%;
         left: 10px;
-        background: url("../../../../static//images/home-page/left-arrow.png");
+        background: transparent;
+        background-image: url("../../../../static//images/home-page/left-arrow.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -89,7 +93,8 @@ export default {
     &__nav.carosuel__next{
         right: 10px;
         left: auto;
-        background: url('../../../../static//images/home-page/right-arrow.png');
+        background: transparent;
+        background-image: url('../../../../static//images/home-page/right-arrow.png');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -120,6 +125,17 @@ export default {
     }
 }
 
+@include max-width(800px){
+    .carousel{
+        &__pagination{
+            display:none;
+        }
+        &__nav{
+            height: 65px;
+            width: 30px;
+        }
+    }
+}
 
 
 </style>

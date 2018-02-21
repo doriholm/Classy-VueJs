@@ -81,7 +81,7 @@ export default {
     margin: 0 auto;
   }
   &__name {
-    grid-column: 6 / 8;
+    grid-column: 4 / 10;
     font-weight: 600;
   }
   &__text {
@@ -116,15 +116,11 @@ export default {
     }
 }
 
-.fade-transition {
-  transition: all 0.8s ease;
-  overflow: hidden;
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
+
+
+@include max-width($tablet-wide){
+.testimonials__text {
+    grid-column: 1 / 13;
 }
-.fade-enter, .fade-leave {
-  opacity: 0;
-  visibility: hidden;
 }
 </style>

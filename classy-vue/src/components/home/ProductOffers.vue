@@ -85,23 +85,25 @@ export default {
 
 @include max-width($phone-wide) {
   .product-offers {
-    &__container {
-      grid-template-rows: repeat(4, 1fr);
-    }
-    &__image {
-      &--left {
-        grid-column: 2 / span 10;
-        grid-row: 2 / 4;
-      }
-      &--top-right {
-        grid-column: 2 / span 10;
+    &__wrap {
+      &-topright {
+         grid-column: 2 / span 10;
         width: 100%;
       }
-      &--bottom-right {
+      &-left {
+         grid-column: 2 / span 10;
+        grid-row: 2 / 4;
+      }
+      &-bottomright {
         grid-column: 2 / span 10;
         grid-row: 4 / 5;
       }
     }
+    &__container {
+      grid-template-rows: repeat(4, 1fr);
+    }
+    
+    }
   }
-}
+
 </style>

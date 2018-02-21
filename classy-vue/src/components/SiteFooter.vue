@@ -321,7 +321,7 @@ export default {
     font-size: 1.25rem;
     font-weight: 500;
     text-transform: uppercase;
-    grid-column: span 14;
+    grid-column: span 12;
     text-align: center;
     overflow: hidden;
     margin-bottom: 2.5rem;
@@ -350,12 +350,20 @@ export default {
   grid-column: 3 / 11;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   &__item {
     height: 85px;
+    margin: 5px;
     transition: all 0.5s ease-in;
     &:hover {
       fill: $sky-blue;
     }
   }
+}
+
+@include max-width($tablet-wide){
+.social-media-icons {
+    grid-column: 1 / 13;
+}
 }
 </style>

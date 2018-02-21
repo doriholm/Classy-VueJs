@@ -22,7 +22,7 @@ export default {
 .newsletter-banner {
   background-color: $sky-blue;
   padding: $section-padding;
-  @include grid-col-3;
+  
   &__layout {
     grid-column: 2 / 3;
     @include grid-col-12;
@@ -43,6 +43,23 @@ export default {
   }
   &__button {
     width: 45%;
+  }
+}
+
+@include tablet{
+  .email-form{
+    grid-column: 2 / 12;
+  }
+}
+
+@include max-width($tablet){
+  .email-form{
+    grid-column: 2 / 12;
+    flex-direction: column;
+    &__input, &__button{
+      width: 100%;
+      padding: 0.95rem;
+    }
   }
 }
 </style>

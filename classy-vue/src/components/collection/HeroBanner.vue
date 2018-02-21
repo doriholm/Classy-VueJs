@@ -20,7 +20,6 @@ export default {
 @import '../../assets/styles/modules/_mixins';
 
 .hero-banner {
-  @include grid-col-3;
   color: $white;
   position: relative;
   &__content {
@@ -65,6 +64,22 @@ export default {
   }
   &__button {
     padding: 1rem 3rem;
+  }
+}
+
+
+@include max-width(1000px){
+  .hero-banner{
+    &__sub-headline{
+      font-size: 2rem;
+    &:before,
+    &:after {
+      width: 8rem;
+    }
+    }
+    &__headline{
+      font-size: 4rem;
+    }
   }
 }
 </style>

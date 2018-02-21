@@ -1,3 +1,6 @@
+@import "../modules/mixins";
+@import "../modules/variables";
+
 .border {
   border: 2px solid;
   padding: 10px;
@@ -142,6 +145,12 @@
 @include tablet-wide {
   .product{
     grid-column: span 4;
+  }
+}
+
+@include max-width($tablet){
+  .product{
+    grid-column: span 6;
   }
 }
 
