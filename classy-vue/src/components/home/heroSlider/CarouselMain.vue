@@ -70,7 +70,7 @@ export default {
     position: relative;
     &__nav{
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 10px;
         background: url("../../../../static//images/home-page/left-arrow.png");
         background-position: center;

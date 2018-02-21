@@ -88,13 +88,12 @@ export default {
 @import '../../assets/styles/modules/_mixins';
 
 .products-preview {
-    min-height: 620px;
+  min-height: 620px;
   grid-column: 2 / 3;
-  @include grid-col-12;
   grid-gap: 1rem;
   margin-bottom: $margin-bottom;
   &__header {
-    grid-column: span 14;
+    grid-column: span 12;
     text-align: center;
   }
   &__category{

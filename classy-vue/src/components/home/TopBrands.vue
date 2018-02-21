@@ -32,13 +32,13 @@ export default {
       return {
         swiperOption: {
           slidesPerView: 5,
-          spaceBetween: 30,
           slidesPerGroup: 1,
           loop: true,
           loopFillGroupWithBlank: false,
+          centeredSlides: true,            
           autoplay: {
             delay: 2500,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           },
           pagination: {
             el: '.swiper-pagination',
@@ -50,20 +50,17 @@ export default {
           },
           breakpoints: {
             1100: {
+              centeredSlides: false,            
               slidesPerView: 4,
-              spaceBetween: 40
             },
-            768: {
+            800: {
               slidesPerView: 3,
-              spaceBetween: 30
             },
             640: {
               slidesPerView: 2,
-              spaceBetween: 20
             },
-            320: {
+            300: {
               slidesPerView: 1,
-              spaceBetween: 10
             }
           }
         }
@@ -81,17 +78,13 @@ export default {
 .top-brands {
   grid-column: 1 / 4;
   background-color: $gray;
-  @include grid-col-3;
   padding: $section-padding;
   margin-bottom: $margin-bottom;
   &__layout {
-    //width: 500px;
     grid-column: 2 / 3;
-    //@include grid-col-5;
     grid-column-gap: 5rem;
   }
   &__headline {
-    //grid-column: span 5;
     font-size: 1.25rem;
     text-align: center;
     margin-bottom: 3rem;
@@ -117,9 +110,9 @@ export default {
     }
   }
   &__image {
-    width: 150px;
-    margin-top: 2rem;
-    margin-bottom: 6rem;
+    width: 100%;
+    padding: 2rem 2rem 4rem 2rem;
+    
   }
 }
 </style>

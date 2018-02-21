@@ -68,7 +68,6 @@ export default {
 
 .testimonials {
   background-color: $sky-blue;
-  @include grid-col-3;
   padding: $section-padding;
   &__layout {
     position: relative;

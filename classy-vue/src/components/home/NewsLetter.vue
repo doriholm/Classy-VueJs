@@ -1,12 +1,13 @@
 <template>
      <section class="newsletter">
+      <div class="men-lookbook-container">
             <div class="men-lookbook center">
                 <div class="border border--white">
                     <h2 class="lookbook-text__top">Men's</h2>
                     <h2 class="lookbook-text__bottom">lookbook</h2>
                 </div>
             </div>
-
+      </div>
             <div class="newsletter-item">
                 <div class="newsletter-item__content border border--gray">
                     <div class="circle circle--small circle--blue">
@@ -23,31 +24,32 @@
                     </form>
                 </div>
             </div>
-
+      <div class="women-lookbook-container">
             <div class="women-lookbook center">
                 <div class="border border--white">
                     <h2 class="lookbook-text__top">Women's</h2>
                     <h2 class="lookbook-text__bottom">lookbook</h2>
                 </div>
             </div>
-        </section>
+            </div>
+     </section>
 </template>
 
 <script>
 export default {
-  name: 'news-letter',
-}
+  name: "news-letter"
+};
 </script>
 
 <style lang="scss">
-@import '../../assets/styles/modules/_variables';
-@import '../../assets/styles/modules/_mixins';
+@import "../../assets/styles/modules/_variables";
+@import "../../assets/styles/modules/_mixins";
 
 .newsletter {
-  @include grid-col-12;
   margin-bottom: $margin-bottom;
 }
 .newsletter-item {
+  z-index: 5;
   grid-column: 5 / 9;
   background-color: $light-gray;
   padding: 1rem;
@@ -88,23 +90,39 @@ export default {
 }
 
 .men-lookbook {
-  grid-column: 1 / 5;
   padding: 9rem 0;
   display: flex;
   justify-content: center;
   color: $white;
   text-align: center;
+  transition: all 1s ease;
   @include background("../../../static/images/home-page/mens-lookbook.jpg");
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.men-lookbook-container {
+  grid-column: 1 / 5;
+  overflow: hidden;
 }
 
 .women-lookbook {
-  grid-column: 9 / 13;
   padding: 9rem 0;
   display: flex;
   justify-content: center;
   color: $white;
   text-align: center;
+  transition: all 1s ease;
   @include background("../../../static/images/home-page/womens-lookbook.jpg");
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.women-lookbook-container {
+  grid-column: 9 / 13;
+  overflow: hidden;
 }
 
 .lookbook-text {
@@ -118,6 +136,22 @@ export default {
     font-size: 3rem;
     font-weight: 400;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .newsletter {
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .newsletter-item {
+    grid-column: 2 / span 10;
+    margin-bottom: 2rem;
+  }
+  .men-lookbook-container,
+  .women-lookbook-container {
+    grid-column: span 6;
+    grid-row: 2 / 3;
   }
 }
 </style>

@@ -37,7 +37,7 @@
                         <use xlink:href="#search-icon"></use>
                     </svg>
                 </a>
-                <div v-on:click="showMenu" class="burger-nav main-nav__item">
+                <div v-on:click="showMenu" class="burger-nav ">
                     <div class="menu-icon"></div>
                     <div class="menu-icon"></div>
                     <div class="menu-icon"></div>
@@ -48,70 +48,70 @@
     </header>
 </template>
 
+
 <script>
 export default {
   name: "site-header",
-  data: function(){
+  data: function() {
     return {
       check: true,
-      isOpen: '',
+      isOpen: ""
       //shoppingBag: 'shoppingBag'
     };
   },
-  props: ['msg'],
-  mounted: function(){
-    this.checkHead()
+  props: ["msg"],
+  mounted: function() {
+    this.checkHead();
   },
   watch: {
-      '$route' :function(){
-          this.checkHead();
-      }
-  }, 
-  methods:{
-     checkHead: function() {
-         return (document.querySelector('.hasHero') !== null) ? (this.check = true) : (this.check = false);
-           },
-    showMenu: function(event){
-        this.isOpen = 'menu'
-        this.$emit('isOpen', this.isOpen);
-        this.isOpen = 'none'
-        console.log(this.isOpen);
+    $route: function() {
+      this.checkHead();
+    }
+  },
+  methods: {
+    checkHead: function() {
+      return document.querySelector(".hasHero") !== null
+        ? (this.check = true)
+        : (this.check = false);
     },
-    showShoppingBag: function(event){
-        this.isOpen = 'shoppingBag';
-        this.$emit('isOpen', this.isOpen);
-        this.isOpen = 'none'
-        console.log(this.isOpen);
+    showMenu: function(event) {
+      this.isOpen = "menu";
+      this.$emit("isOpen", this.isOpen);
+      this.isOpen = "none";
+      console.log(this.isOpen);
+    },
+    showShoppingBag: function(event) {
+      this.isOpen = "shoppingBag";
+      this.$emit("isOpen", this.isOpen);
+      this.isOpen = "none";
+      console.log(this.isOpen);
     }
   }
 };
 </script>
 
-<style lang="scss">
-@import '../assets/styles/modules/_variables';
-@import '../assets/styles/modules/_mixins';
 
-.burger-nav{
-    height: 22px;
-    width: 22;
+<style lang="scss">
+@import "../assets/styles/modules/_variables";
+@import "../assets/styles/modules/_mixins";
+
+.burger-nav {
+  height: 40px;
+  width: 40px;
+  margin-left: 1rem;
 }
 
-.menu-icon{
-    width: 22px;
-    height: 3px;
-    background-color: $white;
-    margin: 4px 0;
+.menu-icon {
+  width: 40px;
+  height: 5px;
+  background-color: $white;
+  margin: 7px 0;
 }
 
 .main-header {
   width: 100%;
   padding: 1rem 0;
   background-color: $dark;
-}
-
-.header-pos-absolute{
-  position: absolute;
-  background-color: transparent;    
 }
 
 .nav-container {
@@ -121,26 +121,49 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
 }
 
 .main-nav {
-    display: flex;
+  display: flex;
   &__item {
-    color: $white;
-    margin-left: 1rem;
+    display: none;
   }
 }
 
-.logo--header{
-    width: 200px;
-    color: $white;
+.logo--header {
+  width: 200px;
+  color: $white;
 }
 
-#logo{
-    color: $white;
+#logo {
+  color: $white;
 }
 
+@include min-width(800px) {
+  .header-pos-absolute {
+    position: absolute;
+    background-color: transparent;
+  }
+  .main-nav {
+    display: flex;
+    &__item {
+      display: block;
+      color: $white;
+      margin-left: 1rem;
+    }
+  }
+  .burger-nav {
+  height: 22px;
+  width: 22px;
+  margin-left: 1rem;
+}
 
+.menu-icon {
+  width: 22px;
+  height: 3px;
+  background-color: $white;
+  margin: 4px 0;
+}
+}
 </style>
 

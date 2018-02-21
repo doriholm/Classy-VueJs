@@ -91,7 +91,7 @@
       display: block;
     }
     &:hover > .product__extra-options {
-      bottom: 0;
+      bottom: -1px;
     }
   }
   &__sale-tag {
@@ -112,7 +112,6 @@
     opacity: 0.9;
     transition: all 0.25s linear;
     padding: 1rem 0;
-    //filter: blur(4px);
     &--centering {
       display: flex;
       flex-direction: column;
@@ -140,6 +139,11 @@
   }
 }
 
+@include tablet-wide {
+  .product{
+    grid-column: span 4;
+  }
+}
 
 
 

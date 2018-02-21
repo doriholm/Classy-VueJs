@@ -3,11 +3,13 @@
 
 .grid-layout{
   @include grid-col-3;
+  @include max-width-layout(950px);
 }
 
 // ------ HOME -----
 .grid-layout--home{
   @include grid-col-3;
+  @include max-width-layout(950px);
   grid-template-areas: 
   "hero-s hero-s hero-s"
   ". newsl ."
@@ -18,13 +20,38 @@
   "testimonials testimonials testimonials"
 }
 
-.hero-banner-slider{grid-area: hero-s;}
-.newsletter{grid-area: newsl;}
-.top-brands{grid-area: brand-s;}
-.product-offers{grid-area: offers;}
-.products-preview{grid-area: prod-preview;}
-.discount{grid-area: discount;}
-.testimonials{grid-area: testimonials;}
+.hero-banner-slider{
+  grid-area: hero-s;
+}
+.newsletter{
+  grid-area: newsl;
+  @include grid-col-12;
+}
+.top-brands{
+  grid-area: brand-s;
+  display: grid;
+  grid-template-columns: minmax(15px, auto) minmax(300px, 1170px) minmax(15px, auto);
+}
+.product-offers{
+  grid-area: offers;
+  &__container{
+    @include grid-col-12;    
+  }
+}
+.products-preview{
+  grid-area: prod-preview;
+  @include grid-col-12;
+}
+.discount{
+  grid-area: discount;
+  @include grid-col-3;
+  @include max-width-layout(950px);
+}
+.testimonials{
+  grid-area: testimonials;
+  @include grid-col-3;
+  @include max-width-layout(950px);
+}
 
 // -------- COLLECTIONS ---------
 .grid-layout--collections{

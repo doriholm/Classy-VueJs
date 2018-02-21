@@ -51,7 +51,7 @@
                 </ul>
             </div>
             <div class="main-footer__credit">
-                <img src="../../static/images/credit-cards.png" alt="" class="">
+                <img class="main-footer__credit--image" src="../../static/images/credit-cards.png" alt="" >
             </div>
             <div class="main-footer__logo">
                 <img src="../../static/images/logo.png" alt="" class="logo">
@@ -225,14 +225,17 @@
 
 <script>
 export default {
-  name: 'site-footer'
-}
+  name: "site-footer"
+};
 </script>
 
 <style lang="scss">
-@import '../assets/styles/modules/_variables';
-@import '../assets/styles/modules/_mixins';
+@import "../assets/styles/modules/_variables";
+@import "../assets/styles/modules/_mixins";
 
+.hidden {
+  display: none;
+}
 
 .main-footer {
   background-color: $dark;
@@ -241,22 +244,24 @@ export default {
     @include grid-col-12;
     padding: $section-padding;
   }
-  &__questions {
-    grid-column: 1 / 3;
-  }
-  &__buy {
-    grid-column: 3 / 5;
-  }
+  &__questions,
+  &__buy,
   &__about {
-    grid-column: 5 / 7;
+    grid-column: span 2;
   }
+
   &__credit {
-    grid-column: 7 / 10;
+    grid-column: span 3;
     display: flex;
     align-items: center;
+    &--image {
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+    }
   }
   &__logo {
-    grid-column: 10 / 13;
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -281,6 +286,25 @@ export default {
       color: $dark-gray;
       font-size: 0.875rem;
       font-weight: 500;
+    }
+  }
+}
+
+@include max-width(950px) {
+  .main-footer {
+      &__layout{
+      grid-gap: 2rem;
+      padding: 1rem 0;          
+      }
+    &__questions,
+    &__buy,
+    &__about {
+      grid-column: span 4;
+    }
+
+    &__credit,
+    &__logo {
+      grid-column: span 6;
     }
   }
 }

@@ -7,10 +7,13 @@
     }
 }
 
+//grid layout
 @mixin grid-col-3{
     display: grid;
-    grid-template-columns: auto minmax(700px, 1170px) auto;
+    grid-template-columns: minmax(15px, auto) minmax(700px, 1170px) minmax(15px, auto);
 }
+
+
 
 @mixin grid-col-4{
     display: grid;
@@ -47,3 +50,36 @@
 //      display: grid;
 //      grid-gap:30px;
 //      grid-template-columns: auto repeat( 12, 70px ) auto;
+
+
+//media queries
+@mixin tablet-small {
+    @media (min-width: #{$phone-wide}) and (max-width: #{$tablet-small}) {
+      @content;
+    }
+  }
+
+@mixin tablet-wide {
+    @media (min-width: #{$tablet-wide}) and (max-width: #{$desktop - 1px}) {
+      @content;
+    }
+  }
+  
+@mixin min-width($width) {
+    @media (min-width: #{$width}) {
+      @content;
+    }
+  }
+
+@mixin max-width-layout($width){
+    @media only screen and (max-width: $width){
+    display: grid;
+    grid-template-columns: 15px auto 15px;
+    }
+}
+
+@mixin max-width($width){
+    @media only screen and (max-width: $width){
+        @content;
+    }
+}
