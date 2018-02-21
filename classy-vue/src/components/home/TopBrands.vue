@@ -4,11 +4,11 @@
                 <h1 class="top-brands__headline">Top brands</h1>
        
         <swiper :options="swiperOption" ref="mySwiper" >
-                <swiper-slide><img src="../../../static/images/product-logo1.png" alt="" class="top-brands__image"></swiper-slide>
-                <swiper-slide><img src="../../../static/images/product-logo2.png" alt="" class="top-brands__image"></swiper-slide>
-                <swiper-slide><img src="../../../static/images/product-logo3.png" alt="" class="top-brands__image"></swiper-slide>
-                <swiper-slide><img src="../../../static/images/product-logo4.png" alt="" class="top-brands__image"></swiper-slide>
-                <swiper-slide><img src="../../../static/images/product-logo5.png" alt="" class="top-brands__image"></swiper-slide>
+                <swiper-slide><img src="../../../static/images/home-page/product-logo1new.png" alt="" class="top-brands__image"></swiper-slide>
+                <swiper-slide><img src="../../../static/images/home-page/product-logo2new.png" alt="" class="top-brands__image"></swiper-slide>
+                <swiper-slide><img src="../../../static/images/home-page/product-logo3new.png" alt="" class="top-brands__image"></swiper-slide>
+                <swiper-slide><img src="../../../static/images/home-page/product-logo4new.png" alt="" class="top-brands__image"></swiper-slide>
+                <swiper-slide><img src="../../../static/images/home-page/product-logo5new.png" alt="" class="top-brands__image"></swiper-slide>
                 <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
 
@@ -47,6 +47,24 @@ export default {
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            1100: {
+              slidesPerView: 4,
+              spaceBetween: 40
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            }
           }
         }
       }
@@ -99,8 +117,9 @@ export default {
     }
   }
   &__image {
-    width: 200px;
-    margin-bottom: 4rem;
+    width: 150px;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
   }
 }
 </style>

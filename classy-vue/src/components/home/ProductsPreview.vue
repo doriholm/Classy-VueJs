@@ -88,7 +88,7 @@ export default {
 @import '../../assets/styles/modules/_mixins';
 
 .products-preview {
-    min-height: 600px;
+    min-height: 620px;
   grid-column: 2 / 3;
   @include grid-col-12;
   grid-gap: 1rem;
