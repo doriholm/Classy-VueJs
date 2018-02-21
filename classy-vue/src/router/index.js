@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HomePage from '@/components/HomePage'
 import CollectionPage from '@/components/CollectionPage'
 import ProductPage from '@/components/ProductPage'
+import ContactPage from '@/components/ContactPage'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/product/:id',
       name: 'ProductPage',
       component: ProductPage
+    },
+    {
+      path: '/contact',
+      name: 'ContactPage',
+      component: ContactPage
     }
   ],
   scrollBehavior (to, from, savedPosition) {
