@@ -1,3 +1,5 @@
+// ------- BACKGROUND IMAGE ---------
+
 @mixin background($imgpath, $position: center center, $size: cover, $repeat: no-repeat ){
     background: {
         image: url($imgpath);
@@ -7,7 +9,10 @@
     }
 }
 
-//grid layout
+
+// ------- GRID LAYOUT ---------
+
+
 @mixin grid-col-3{
     display: grid;
     grid-template-columns: minmax(15px, auto) minmax(700px, 1170px) minmax(15px, auto);
@@ -23,21 +28,14 @@
     grid-template-columns: 15px 1fr 1fr 15px;
 }
 
-@mixin grid-col-12{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-}
-
 @mixin grid-col-5{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
-//Right way to do it
-@mixin grid-col-14{
+@mixin grid-col-12{
     display: grid;
-    //grid-gap:30px;
-    grid-template-columns: auto repeat( 12, 97.5px ) auto;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 //with grid gap
@@ -47,15 +45,23 @@
     grid-template-columns: repeat( 12, 70px );
 }
 
+//even more complex..
+@mixin grid-col-14{
+    display: grid;
+    //grid-gap:30px;
+    grid-template-columns: auto repeat( 12, 97.5px ) auto;
+}
 
 // Perfect grid for a 12 col layout 
-// but does not work well with mockup
+// but it sucks
 //      display: grid;
 //      grid-gap:30px;
 //      grid-template-columns: auto repeat( 12, 70px ) auto;
 
 
-//media queries
+// -------  MEDIA QUERIES---------
+
+
 @mixin tablet-small {
     @media (min-width: #{$phone-wide}) and (max-width: #{$tablet-small}) {
       @content;

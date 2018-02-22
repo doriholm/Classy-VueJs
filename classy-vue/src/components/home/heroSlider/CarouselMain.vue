@@ -38,7 +38,6 @@ export default {
     },
  methods: {
      startRotation: function() {
-            console.log('start');
             this.timer = setInterval(this.next, 4000);
         },
      next (){

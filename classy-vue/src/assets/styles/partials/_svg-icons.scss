@@ -10,6 +10,8 @@
   }
 }
 
+// --------- GLASSES, HANGER & BOWTIE -------
+
 .glass-1,
 .glass-2 {
     fill: none;
@@ -39,7 +41,8 @@
   }
 }
 
-//Logo
+// --------- LOGO -------
+
 .cls-1 {
   fill: none;
   stroke: currentColor;
@@ -54,62 +57,45 @@
   fill: currentColor;
 }
 
-.user-icon {
-  //stroke-width: 2.5;
-  //stroke-miterlimit: 10;
-}
+
+// --------- NAVIGATION ICONS -------
+
 
 .shopping-bag-icon {
-  //stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
-  // stroke-miterlimit: 10;
 }
 
-.search-icon-circle {
-  // stroke-width: 3;
-  //stroke-miterlimit: 10;
-}
 
 .search-icon-line {
-  //stroke-width: 3;
   stroke-linecap: round;
-  //stroke-miterlimit: 10;
 }
 
+
+// --------- MAIL ICON -------
+
 .mail-icon {
-  //fill: none;
   stroke: #fff;
   stroke-linecap: round;
   stroke-linejoin: round;
-  //stroke-miterlimit: 10;
 }
+
+
+// --------- PRODUCT ICONS -------
 
 .quick-view-icon,
 .heart-icon {
   fill: #fff;
 }
 
-/* 
-Social media icons
-*/
+
+// --------- SOCIAL MEDIA ICONS -------
+
 
 .st0 {
   display: none;
 }
-//does nothing
-.st1 {
-  display: inline;
-  fill: none;
-  stroke: #b5b5b5;
-  stroke-width: 0.25;
-  stroke-miterlimit: 10;
-}
-//does nothing
-.st2 {
-  display: inline;
-  fill: #b5b5b5;
-}
+
 .st3 {
   fill: none;
   stroke: currentColor;

@@ -264,6 +264,8 @@ export default {
     justify-content: space-between;
     &__item {
       margin-top: 0;
+      width: 42px;
+      height: 52px;
     }
   }
 }

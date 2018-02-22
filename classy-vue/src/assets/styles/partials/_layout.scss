@@ -1,6 +1,7 @@
 @import "../modules/mixins";
 @import "../modules/variables";
 
+// ------ HEADER & FOOTER ---------
 .grid-layout{
   @include grid-col-3;
   @include max-width-layout(950px);
@@ -54,6 +55,7 @@
 }
 
 // -------- COLLECTIONS ---------
+
 .grid-layout--collections{
   @include grid-col-3;
   @include max-width-layout(950px);
@@ -77,6 +79,7 @@
 
 
 // -------- PRODUCT ---------
+
 .grid-layout--product{
   @include grid-col-3;
   @include max-width-layout(950px);  
@@ -88,7 +91,9 @@
   "discount-2 discount-2 discount-2"
 }
 
-.banner-discount-top{grid-area: discount-1;}
+.banner-discount-top{
+  grid-area: discount-1;
+}
 
 .info-section-1{
   grid-area: info-1;
@@ -113,9 +118,9 @@
   }
 }
 
-.banner-discount-bottom{grid-area: discount-2;}
-
-
+.banner-discount-bottom{
+  grid-area: discount-2;
+}
 
 .grid-layout--product--details{
   grid-area: product;
@@ -132,9 +137,9 @@
 .product-summary{grid-area: ps;}
 .product-teaser{grid-area: ts;}
 
+// ------------ PRODUCT MEDIA QUERIES ----------
 
-
-  @media (min-width: 851px) and (max-width: 1180px){
+@media (min-width: 851px) and (max-width: 1180px){
   .grid-layout--product--details{
    @include grid-col-4--small;
     grid-gap: 2rem;
@@ -166,7 +171,6 @@
     }
   }
 }
-
 
 @media (min-width: 690px) and (max-width: 850px){
   .grid-layout--product--details{

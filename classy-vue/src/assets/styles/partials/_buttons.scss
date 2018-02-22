@@ -1,3 +1,5 @@
+// --------- BUTTON TEMPLATE -------
+
 .btn {
     font-family: $font;
     font-weight: 600;
@@ -21,6 +23,8 @@
   }
 }
 
+// --------- BUTTON COLOR  -------
+
 @mixin btn-theme($border-color, $bg-color:null ,$font-color:null) {
   border-color: $border-color;
   background-color: $bg-color;
@@ -39,6 +43,9 @@
 .btn--blue {
   @include btn-theme($sky-blue, $sky-blue, $white);
 }
+
+
+// --------- BUTTON SIZE -------
 
 .btn--small{
     font-size: 0.75rem; //12px

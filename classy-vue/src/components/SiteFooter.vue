@@ -316,7 +316,8 @@ export default {
 }
 
 .logo-footer__container{
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     margin: 0 auto;
 }
 
