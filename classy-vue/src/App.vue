@@ -3,7 +3,7 @@
     <site-header @msg="isOpen" @isOpen="isOpen = $event"></site-header>
     <!-- <img src="./assets/logo.png"> -->
     <router-view/>
-    <main-menu :open=isOpen></main-menu>
+    <main-menu :open=isOpen @msg="isOpen" @isOpen="isOpen = $event"></main-menu>
     <shopping-bag :open=isOpen></shopping-bag>
     <div v-show="isOpen != 'none'" v-on:click="hideAll" class="overlay"></div>
     <site-footer></site-footer>
@@ -25,7 +25,6 @@ export default {
         },
   watch: {
   	    'isOpen': function(newVal, oldVal) {
-    	  console.log('value changed from ' + oldVal + ' to ' + newVal);
            }
         },
   components: {

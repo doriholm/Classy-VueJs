@@ -2,9 +2,9 @@
   <div :class="{isActive: isOpen == 'menu'}" class="main-menu">
       <div class="main-menu__container">
       <ul class="main-menu-list">
-          <li class="main-menu-list__item">Home</li>
-          <li class="main-menu-list__item">Collection</li>
-          <li class="main-menu-list__item">Contact</li>
+          <router-link :to="'/'"><li v-on:click="hideMenu" class="main-menu-list__item">Home</li></router-link>
+          <router-link :to="'/collection'"><li v-on:click="hideMenu" class="main-menu-list__item">Collection</li></router-link>
+          <router-link :to="'/contact'"><li v-on:click="hideMenu" class="main-menu-list__item">Contact</li></router-link>
       </ul>
 </div>
   </div>
@@ -22,15 +22,17 @@ export default {
     },
  watch: {
         open: function(newVal, oldVal) {
-        console.log("Main menu value changed from " + oldVal + " to " + newVal);
         this.changeIsOpen();
         }
     },
     methods: {
         changeIsOpen: function(){
             this.isOpen = this.open;
-        console.log("isOpen changed");
             
+        },
+        hideMenu: function(event){
+            this.isOpen = "none";
+            this.$emit("isOpen", this.isOpen);
         }
     }
 };
@@ -43,5 +45,23 @@ export default {
 
 .main-menu__container{
     padding: 50px;
+}
+
+.main-menu-list{
+    list-style: none;
+    &__item{
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 3rem 0;
+        text-transform: uppercase;
+        color: $darker-gray;
+        transition: all .5s linear;
+        &:hover{
+            color: $sky-blue;
+            &:after{
+                content: " - ";
+            }
+        }
+    }
 }
 </style>

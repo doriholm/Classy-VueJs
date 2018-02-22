@@ -35,15 +35,12 @@ export default {
     },
  watch: {
         open: function(newVal, oldVal) {
-        console.log("Main menu value changed from " + oldVal + " to " + newVal);
         this.changeIsOpen();
         }
     },
     methods: {
         changeIsOpen: function(){
             this.isOpen = this.open;
-        console.log("isOpen sidemenu changed");
-            
         }
     }
 }
