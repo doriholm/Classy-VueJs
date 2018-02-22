@@ -1,38 +1,170 @@
 [
     {
         "id": 1,
-        "title": "Hoodie",
-        "price": 499,
-        "description": "What an amazing sweater we have here",
+        "title": "Stylish Hoodie Grame",
+        "price": 299,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
         "image_url": "../../../static/images/product/jacket1.jpg",
-        "featured": "newArrivals",
+        "featured": "",
         "sale": true,
-        "brand": "Spongebob and Patrick",
-        "info": "Handcrafted by small spiders living in Angola"
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
     },
     {
         "id": 2,
-        "title": "Sweater",
-        "price": 299,
-        "description": "What an amazing sweater we have here",
+        "title": "Sweater Exotic Sea",
+        "price": 399,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
         "image_url": "../../../static/images/product/jumpsuit1.jpg",
-        "featured": "topSellers"
+        "featured": "newArrivals",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
     },
     {
         "id": 3,
-        "title": "Pants",
-        "price": 199,
-        "description": "What an amazing sweater we have here",
+        "title": "Up & Down Pants",
+        "price": 499,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
         "image_url": "../../../static/images/product/playsuit1.jpg",
-        "featured": "featured",
-        "sale": true
+        "featured": "newArrivals",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
     },
     {
         "id": 4,
-        "title": "Jacket",
-        "price": 599,
-        "description": "What an amazing sweater we have here",
+        "title": "Jacket With Pockets",
+        "price": 199,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
         "image_url": "../../../static/images/product/playsuit2.jpg",
-        "featured": "featured"
+        "featured": "newArrivals",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 5,
+        "title": "Classic Tingety Ting",
+        "price": 499,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jacket1.jpg",
+        "featured": "topSellers",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 6,
+        "title": "Timbaland Coshier",
+        "price": 299,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jumpsuit1.jpg",
+        "featured": "topSellers",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 7,
+        "title": "Graymond Diamon",
+        "price": 199,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit1.jpg",
+        "featured": "topSellers",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 8,
+        "title": "Rihanna Corolla",
+        "price": 599,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit2.jpg",
+        "featured": "featured",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 9,
+        "title": "Playsuit Jacket",
+        "price": 199,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jacket1.jpg",
+        "featured": "topSellers",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 10,
+        "title": "Jumpsuit Swag Hoodie",
+        "price": 599,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jumpsuit1.jpg",
+        "featured": "",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 11,
+        "title": "Crazy Number 10",
+        "price": 399,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit1.jpg",
+        "featured": "featured",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 12,
+        "title": "Life jacket",
+        "price": 499,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit2.jpg",
+        "featured": "featured",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 13,
+        "title": "Homemade Vintage Scarf",
+        "price": 499,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jacket1.jpg",
+        "featured": "newArrivals",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 14,
+        "title": "Curry Brown Longpants",
+        "price": 299,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/jumpsuit1.jpg",
+        "featured": "",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 15,
+        "title": "Purple Earsnaps",
+        "price": 199,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit1.jpg",
+        "featured": "featured",
+        "sale": true,
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
+    },
+    {
+        "id": 16,
+        "title": "Jussi Adler Olsen",
+        "price": 599,
+        "description": "The dress' waist is broad, but it's a comfortable fit. It's not decorated with anything in order to create a graceful, flowing look. Below the waist the dress widens into a ball gown-like style dress. The dress reaches to just below her knees and is the same length all around.",
+        "image_url": "../../../static/images/product/playsuit2.jpg",
+        "featured": "",
+        "brand": "Zara’s story begins with the opening of our first store in the Spanish coastal city of A Coruña in 1975, an early milestone in our company’s long history. Over the years, Zara has remained faithful to its core values, expressed simply in the same four key words that define all our stores: beauty, clarity, functionality and sustainability.",
+        "info": "Handcrafted by small spiders living in Angola. This story takes us a all the way into the jungle where the life is always harsh but here the true diamonds are uncovered in a spectacular fashion. Amazing precision and fantasy combined in wonderful play of words"
     }
 ]

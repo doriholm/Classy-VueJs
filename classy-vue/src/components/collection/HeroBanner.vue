@@ -82,4 +82,23 @@ export default {
     }
   }
 }
+
+@include max-width(700px){
+  .hero-banner{
+    &__sub-headline{
+      font-size: 1.5rem;
+    &:before,
+    &:after {
+      width: 5rem;
+    }
+    }
+    &__headline{
+      font-size: 2rem;
+    }
+    &__button{
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}
 </style>

@@ -44,7 +44,7 @@
                 </ul> 
                 <div v-show="activeTab == 1" class="product-summary__description"><p>{{product.description}}</p></div>
                 <div v-show="activeTab == 2" class="product-summary__brand"><p>{{product.brand}}</p></div>
-                <div v-show="activeTab == 3" class="product-summary__Info"><p>{{product.info}}</p></div>
+                <div v-show="activeTab == 3" class="product-summary__info"><p>{{product.info}}</p></div>
             </div>
 
             <div class="product-teaser">
@@ -105,10 +105,17 @@ export default {
   display: flex;
   flex-direction: column;
   &__item {
+    cursor: pointer;
     width: 70px;
     height: 87px;
     display: block;
     margin: 0 auto 1rem;
+    transition: all 0.5s ease-in;
+    &:hover {
+      -webkit-box-shadow: -3px 2px 39px -9px rgba(0, 0, 0, 0.53);
+      -moz-box-shadow: -3px 2px 39px -9px rgba(0, 0, 0, 0.53);
+      box-shadow: -3px 2px 39px -9px rgba(0, 0, 0, 0.53);
+    }
   }
 }
 .image-preview {
@@ -186,9 +193,14 @@ export default {
       border-bottom: 2px solid $darker-gray;
     }
   }
+  &__description,
+  &__brand,
+  &__info {
+    line-height: 1.5;
+  }
 }
 
-.is-active{
+.is-active {
   border: 2px solid $darker-gray;
   border-bottom: none;
 }
@@ -210,12 +222,12 @@ export default {
       border-bottom: 5px solid $sky-blue;
     }
   }
-  &__content{
-      line-height: 2;
-    }
+  &__content {
+    line-height: 2;
+  }
 }
 
-  @media (min-width: 851px) and (max-width: 1180px){
+@media (min-width: 851px) and (max-width: 1180px) {
   .image-thumbnails {
     flex-direction: row;
     justify-content: space-between;
@@ -225,7 +237,7 @@ export default {
   }
 }
 
-@media (min-width: 690px) and (max-width: 850px){
+@media (min-width: 690px) and (max-width: 850px) {
   .image-thumbnails {
     flex-direction: row;
     justify-content: space-between;
@@ -237,14 +249,16 @@ export default {
     &--row {
       flex-direction: column;
       align-items: flex-start;
-      }
-      &__size-guide, &__shipping, &__share {
-        margin: 1rem 0 0 0;
+    }
+    &__size-guide,
+    &__shipping,
+    &__share {
+      margin: 1rem 0 0 0;
     }
   }
 }
 
-@include max-width(689px){
+@include max-width(689px) {
   .image-thumbnails {
     flex-direction: row;
     justify-content: space-between;

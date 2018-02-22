@@ -96,9 +96,14 @@ export default {
   height: 40px;
   width: 40px;
   margin-left: 1rem;
+  transition: all 0.4s ease-in;
+  &:hover .menu-icon{
+  background-color: $darker-gray;
+}
 }
 
 .menu-icon {
+  transition: all 0.4s ease-in;  
   width: 40px;
   height: 5px;
   background-color: $white;
@@ -124,6 +129,10 @@ export default {
   display: flex;
   &__item {
     display: none;
+  transition: all 0.4s ease-in;
+  &:hover{
+    color: $darker-gray;
+  }    
   }
 }
 
@@ -134,6 +143,10 @@ export default {
 
 #logo {
   color: $white;
+  transition: all 0.4s ease-in;
+  &:hover{
+  color: $darker-gray;
+}
 }
 
 @include min-width(800px) {

@@ -11,7 +11,7 @@
             <div class="newsletter-item">
                 <div class="newsletter-item__content border border--gray">
                     <div class="circle circle--small circle--blue">
-                        <svg class="svg svg-nav" viewBox="0 0 30 20">
+                        <svg class="svg svg-nav svg-mail-icon" viewBox="0 0 30 20">
                             <use xlink:href="#mail-icon"></use>
                         </svg>
                     </div>
@@ -19,7 +19,7 @@
                     <h3 class="newsletter-item__subheadline">Join our maillist list to receive
                         <br>special discounts</h3>
                     <form class="newsletter-form" action="">
-                        <input class="newsletter-form__input-field full-width" type="email" name="email" id="" placeholder="" value="ENTER YOUR EMAIL">
+                        <input class="newsletter-form__input-field full-width" type="email" name="email" id="" placeholder="ENTER YOUR EMAIL" value="">
                         <input class="newsletter-form__button btn border full-width" type="button" value="SUBSCRIBE">
                     </form>
                 </div>
@@ -74,6 +74,11 @@ export default {
     font-weight: 500;
     margin: 0 0 2rem 0;
   }
+}
+
+.svg-mail-icon{
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .newsletter-form {
@@ -153,5 +158,16 @@ export default {
     grid-column: span 6;
     grid-row: 2 / 3;
   }
+}
+
+@media only screen and (max-width: 600px) {
+.lookbook-text {
+  &__top {
+    font-size: 1.625rem;
+  }
+  &__bottom {
+    font-size: 2rem;
+  }
+}
 }
 </style>

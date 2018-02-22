@@ -54,7 +54,7 @@
 }
 
 .isActive{
-  width: 500px;
+  width: 450px;
 }
 
 .overlay{
@@ -84,6 +84,7 @@
 }
 
 .product {
+  margin-bottom: 1rem;
   grid-column: span 3;
   &__img-container {
     margin: 0;
@@ -139,6 +140,13 @@
   &__price {
     margin: 0.1rem 0;
     align-self: center;
+  }
+}
+
+.svg-product-icon{
+  transition: all 0.5s ease-in;
+  &:hover{
+    transform: scale(1.1);
   }
 }
 

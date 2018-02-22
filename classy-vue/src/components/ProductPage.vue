@@ -4,6 +4,7 @@
     <product-detail></product-detail>
     <info-box1></info-box1>
     <info-box2></info-box2>
+    <bottom-disocunt></bottom-disocunt>
   </main>
 </template>
 
